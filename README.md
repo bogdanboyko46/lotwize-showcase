@@ -5,10 +5,7 @@
   <img src="assets/wordmark-dark.svg" alt="Lotwize" width="280">
 </picture>
 
-### From a photo of a used car light to a live eBay listing.
-
-Lotwize identifies an automotive light assembly from photos, fills in the eBay listing,<br>
-and publishes it, while leaving the seller in charge of every field and every price.
+Lotwize is the first application to be able to identify a picture of an auto lighting part and complete listing title generation / item specifics while aiding the user in filling in the price relative to the condition.
 
 [**lotwize.ai**](https://lotwize.ai) · [Live benchmarks](https://lotwize.ai/models) · [Try it on your own photo](https://lotwize.ai/demo)
 
