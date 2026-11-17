@@ -34,6 +34,7 @@ Besides retrieval-based identification, a new workflow: **Part # Lookup**, was r
 ## Contents
 
 - [The problem](#the-problem)
+- [Listing by hand vs. with Lotwize](#listing-a-used-headlight-by-hand-and-with-lotwize)
 - [What Lotwize does](#what-lotwize-does)
 - [Results](#results)
 - [How it is built](#how-it-is-built)
@@ -54,6 +55,129 @@ from one year to the next, and the same housing is often sold with different bul
 A reseller listing these parts by hand has to work all of that out, type it into eBay's form, and get it
 right. A wrong year or bulb type means a return or a dispute. That makes the job slow, and it makes a
 confident wrong answer far more expensive than an honest "check this".
+
+## Listing a used headlight: by hand, and with Lotwize
+
+The same job done two ways. By hand, the seller works through eBay's listing form with a few research tabs
+open. With Lotwize, most of the form fills itself. The seller checks what's there, describes the condition and
+sets the price.
+
+| | By hand | With Lotwize |
+|---|---|---|
+| Steps the seller takes | 14 from scratch · 13 with Sell similar | 4, plus any dropdowns |
+| Automated steps | 0 | 9 |
+
+### By hand
+
+After identifying the part, the seller either copies a matching listing with eBay's "Sell similar" or builds one
+from scratch. Every step is manual.
+
+```mermaid
+flowchart LR
+    START(["Lighting part in"])
+    subgraph ID["Identify the part"]
+        direction TB
+        PH["Photograph the part"] --> HOW{"How?"}
+        HOW --> I1["From experience"]
+        HOW --> I2["Reverse image<br/>search on eBay"]
+        HOW --> I3["Part number<br/>lookup"]
+        I1 --> FIT["Cross-check fitment<br/>years · side · bulb"]
+        I2 --> FIT
+        I3 --> FIT
+    end
+    Q{"Matching<br/>active listing?"}
+    subgraph SS["Sell similar"]
+        direction TB
+        S1["Open the matching<br/>listing's Sell similar"] --> S2["Replace its photos<br/>with your own"]
+        S2 --> S3["Adjust the title<br/>to your preference"]
+        S3 --> S4["Adjust the<br/>item specifics"]
+        S4 --> S5["Set the condition,<br/>describe the damage"]
+    end
+    subgraph FS["From scratch"]
+        direction TB
+        F1["Search for and<br/>choose the category"] --> F2["Upload and order<br/>the photos"]
+        F2 --> F3["Write the title<br/>(80 characters)"]
+        F3 --> F4["Fill in the required<br/>item specifics"]
+        F4 --> F5["Fill in the optional<br/>item specifics"]
+        F5 --> F6["Set the condition,<br/>describe the damage"]
+    end
+    subgraph PP["Price and publish"]
+        direction TB
+        PR["Research active<br/>and sold listings"] --> PX["Set the price,<br/>allowing for condition"]
+        PX --> PO["Choose or check shipping,<br/>payment and return policies"]
+        PO --> RV["Review the listing"]
+    end
+    LIVE(["Listed on eBay"])
+    START --> ID --> Q
+    Q -- "yes" --> SS
+    Q -- "no" --> FS
+    SS --> PP
+    FS --> PP
+    PP --> LIVE
+```
+
+### With Lotwize
+
+The seller adds photos and Lotwize fills the listing. Blue steps are automated. A field the photos can't settle
+comes back as a short dropdown instead of a guess. For pricing, Lotwize finds similar live listings, reads each
+one's condition, and sorts the closest match to the seller's own condition to the top. Nothing goes live until
+the seller presses List.
+
+```mermaid
+flowchart LR
+    START(["Lighting part in"])
+    subgraph YOU1["You"]
+        PH["Photograph the part<br/>and add the photos"]
+    end
+    subgraph LZ["Lotwize · automated"]
+        direction TB
+        A1["Straighten the photos"] --> A2["Read the part-number<br/>label, if one is shown"]
+        A2 --> A3["Identify make, model, year range,<br/>side, bulb type, optic, features"]
+        A3 --> C{"Confident<br/>on each field?"}
+        C -- "yes" --> A4["Fill in the field"]
+        C -- "no" --> DD["Offer a short dropdown"]
+        A4 --> A5["Choose the eBay category,<br/>write the title from your template"]
+        DD --> A5
+        A5 --> A6["Fill the item specifics<br/>into eBay's fields"]
+        A6 --> A7["Start the description<br/>from your template"]
+        A7 --> A8["Find similar live listings,<br/>note each one's condition,<br/>sort closest to yours first"]
+    end
+    subgraph YOU2["You"]
+        direction TB
+        PK["Answer any dropdowns"] --> CD["Describe the condition<br/>in the description"]
+        CD --> PX["Set the price beside<br/>the sorted listings"]
+    end
+    L{"List now or<br/>save as a draft?"}
+    DR["Drafts: publish every<br/>ready draft at once"]
+    LIVE(["Listed on eBay,<br/>business policies applied"])
+    START --> YOU1 --> LZ --> YOU2 --> L
+    L -- "now" --> LIVE
+    L -- "draft" --> DR --> LIVE
+    classDef auto fill:#ddf4ff,stroke:#0969da,color:#0a2f5c
+    class A1,A2,A3,C,A4,DD,A5,A6,A7,A8 auto
+```
+
+### Step by step
+
+| Task | By hand | With Lotwize |
+|---|---|---|
+| Photos | Upload and order them. With Sell similar, replace the copied listing's photos. | **You:** add the photos. **Automated:** they're straightened. |
+| Identify | From experience, eBay image search or a part-number lookup, then cross-check the fitment. | **Automated:** make, model, year range, side, bulb, optic and features from the photos, plus the part number from the label. |
+| Unsure fields | The seller's own judgment. | **You:** pick from a short dropdown. |
+| Category | Search for it and choose. | **Automated:** chosen from the identified part. |
+| Title | Write one, or adjust a copied one. | **Automated:** built from the seller's own template. |
+| Item specifics | Fill in the required and optional fields. | **Automated:** filled into eBay's fields from the identification. |
+| Description | Write it, or edit a copied one. | **Automated:** starts from the seller's template. **You:** describe the condition. |
+| Price research | Search active and sold listings in another tab, and judge each one's condition by eye. | **Automated:** similar live listings beside the form, each with a note on its condition, sorted closest to yours first. |
+| Price | You set it. | **You:** set it. Lotwize never suggests a price. |
+| Policies | Choose or check shipping, payment and returns. | **Automated:** the seller's business policies are applied. |
+| Publish | Review and list, one listing at a time. | **You:** list now, or publish every ready draft at once. |
+
+> [!NOTE]
+> This is a rough overview. Listing by hand typically takes from about one minute to nearly three, depending on
+> the seller's experience. Promoted Listings settings are left out of both workflows because they add little time.
+
+---
 
 ## What Lotwize does
 
