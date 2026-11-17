@@ -13,7 +13,6 @@ Besides retrieval-based identification, a new workflow: **Part # Lookup**, was r
 
 <br>
 
-![Status: in production](https://img.shields.io/badge/status-in%20production-1f6feb?style=flat-square)
 ![Headlight benchmark: 1,630 hand-checked parts across 37 makes](https://img.shields.io/badge/benchmark-1%2C630%20hand--checked%20parts-1a7f37?style=flat-square)
 ![About 28,000 automated tests](https://img.shields.io/badge/tests-~28%2C000-6e40c9?style=flat-square)
 ![Source: closed](https://img.shields.io/badge/source-closed-57606a?style=flat-square)
@@ -27,8 +26,7 @@ Besides retrieval-based identification, a new workflow: **Part # Lookup**, was r
 </p>
 
 > **About this repository.** Lotwize is a commercial product, so its source code is private. This repository
-> describes what it does, how well it does it, and how it is built and tested, at a level that doesn't
-> give away how to rebuild it. Every figure here comes from a dated, hand-checked benchmark, and the
+> describes what it does, how well it does it, and how it is built and tested. Every figure here comes from a dated, hand-checked benchmark, and the
 > [method](docs/metrics.md) is described in full.
 
 ---
@@ -48,8 +46,7 @@ Besides retrieval-based identification, a new workflow: **Part # Lookup**, was r
 
 ## The problem
 
-A used headlight is worth between tens and hundreds of dollars, but only if the buyer can find it and
-trust that it fits. Fit depends on details a photo barely shows: the exact generation of a model, which
+A medium to large-scale eBay store can find itself listing hundreds to thousands of headlights and tail lights each week. Fit depends on details a photo barely shows: the exact generation of a model, which
 side of the car, whether the factory shipped it with halogen, xenon or LED bulbs, projector or reflector
 optics, and trim options such as adaptive or matrix lighting. Many generations look almost identical
 from one year to the next, and the same housing is often sold with different bulbs.
