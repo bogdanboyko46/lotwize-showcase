@@ -7,6 +7,8 @@
 
 Lotwize is the first application to be able to identify a picture of an auto lighting part and complete listing title generation / item specifics while aiding the user in filling in the price relative to the condition.
 
+Besides retrieval-based identification, a new workflow: **Part # Lookup** was recently added to accelerate listing generation for automotive parts that have the part # clearly displayed in one of the user's photos. Listings are able to personalized to the user's titling patterns as well. 
+
 [**lotwize.ai**](https://lotwize.ai) · [Live benchmarks](https://lotwize.ai/models) · [Try it on your own photo](https://lotwize.ai/demo)
 
 <br>
