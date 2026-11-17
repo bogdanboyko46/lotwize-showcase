@@ -43,7 +43,6 @@ and publishes it, while leaving the seller in charge of every field and every pr
 - [Engineering practices](#engineering-practices)
 - [By the numbers](#by-the-numbers)
 - [What is deliberately not here](#what-is-deliberately-not-here)
-- [About the author](#about-the-author)
 - [Further reading](#further-reading)
 
 ---
@@ -275,13 +274,6 @@ This repository is meant to show the work without making it easy to copy. These 
 - thresholds, weighting parameters and the expert rule sets;
 - data sources, how the data is collected, and how the library is composed;
 - infrastructure identifiers and anything belonging to a seller.
-
-If you're evaluating this work and want to go deeper, I'm happy to walk through any part of it in conversation.
-
-## About the author
-
-**Bogdan Boyko** designed and built Lotwize: the product, the identification system, its evaluation, and
-the infrastructure it runs on.
 
 [GitHub @bogdanboyko46](https://github.com/bogdanboyko46) · [lotwize.ai](https://lotwize.ai)
 
