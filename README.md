@@ -47,14 +47,7 @@ Besides retrieval-based identification, a new workflow: **Part # Lookup**, was r
 
 ## The problem
 
-A medium to large-scale eBay store can find itself listing hundreds to thousands of headlights and tail lights each week. Fit depends on details a photo barely shows: the exact generation of a model, which
-side of the car, whether the factory shipped it with halogen, xenon or LED bulbs, projector or reflector
-optics, and trim options such as adaptive or matrix lighting. Many generations look almost identical
-from one year to the next, and the same housing is often sold with different bulbs.
-
-A reseller listing these parts by hand has to work all of that out, type it into eBay's form, and get it
-right. A wrong year or bulb type means a return or a dispute. That makes the job slow, and it makes a
-confident wrong answer far more expensive than an honest "check this".
+A medium to large-scale eBay store can find itself listing hundreds to thousands of headlights and tail lights each week. Depending on the workflow used and the user's experience, they may be finding themeselves taking up to three minutes or more listing a single item due to repetitive tasks that can be automated. 
 
 ## Listing a used headlight: by hand, and with Lotwize
 
@@ -62,7 +55,7 @@ The same job done two ways. By hand, the seller works through eBay's listing for
 open. With Lotwize, most of the form fills itself. The seller checks what's there, describes the condition and
 sets the price.
 
-| | By hand | With Lotwize |
+| | By hand | With Lotwize | **ROUGHLY**
 |---|---|---|
 | Steps the seller takes | 14 from scratch · 13 with Sell similar | 4, plus any dropdowns |
 | Automated steps | 0 | 9 |
