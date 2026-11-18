@@ -55,12 +55,14 @@ The same job done two ways. By hand, the seller works through eBay's listing for
 open. With Lotwize, most of the form fills itself. The seller checks what's there, describes the condition and
 sets the price.
 
-| | By hand | With Lotwize | **ROUGHLY**
+| | By hand | With Lotwize |
 |---|---|---|
 | Steps the seller takes | 14 from scratch · 13 with Sell similar | 4, plus any dropdowns |
 | Automated steps | 0 | 9 |
 
 ### By hand
+
+**ROUGHLY**
 
 After identifying the part, the seller either copies a matching listing with eBay's "Sell similar" or builds one
 from scratch. Every step is manual.
