@@ -9,6 +9,8 @@ Lotwize is the first commercial application to be able to identify a picture of 
 
 Besides retrieval-based identification, a new workflow: **Part # Lookup**, was recently added to accelerate listing generation for automotive parts that have the part # clearly displayed in one of the user's photos. Listings are able to personalized to the user's titling patterns as well. 
 
+Two other models: Rear Auto Light Identification Model & Fog Light / DRL Identification Model are not covered in this showcase. However benchmarks and demos are available on https://lotwize.ai to view and test. 
+
 [**lotwize.ai**](https://lotwize.ai) · [Live benchmarks](https://lotwize.ai/models) · [Try it on your own photo](https://lotwize.ai/demo)
 
 <br>
@@ -314,7 +316,7 @@ from disk rather than loaded into RAM. eBay access goes through a separate broke
 | Language tasks | A hosted large language model for text-only steps |
 | Data | Postgres and authentication (Supabase) |
 | Platform | Render · Cloudflare · Stripe · Twilio · SendGrid |
-| Training | Rented cloud GPUs. Inference never needs one. |
+| Training | Rented cloud GPUs. |
 
 ---
 
