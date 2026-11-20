@@ -292,7 +292,7 @@ from this design:
 - **New parts arrive as data, not retraining.** Adding a generation means adding labelled photos to the library.
 - **Disagreement is a signal.** When the neighbours split between two years or two bulb types, the photos
   really don't settle it, and the right output is a choice, not a coin flip.
-- **The answer is explainable.** Every result is backed by real listings that look like the part on the bench.
+- **The answer is explainable.** Every result is backed by real listings that look like the part.
 
 **Precision first.** A wrong answer on a listing turns into a return or a dispute, while a dropdown costs
 the seller one click. So every field goes through a two-stage confidence gate. The first stage checks
